@@ -1,0 +1,103 @@
+nav{
+	width: calc(60% - 4em);
+	font-size: 100%;
+	float: left;
+}
+	nav a {
+		display: inline;
+	}
+
+.aside_left {
+	font-size: 110%;
+	display: block;
+	width: 25%;
+	background-color: rgb(75, 140, 210);
+	float: left;
+	position: initial;
+	text-align: left;
+}
+
+button{
+	display: none;
+}
+
+	.aside_left div {
+		margin-bottom: 5%;
+		padding-left: 1em;
+		color: ghostwhite;
+	}
+
+	.aside_left a {
+		text-decoration: none;
+		color: ghostwhite;
+		-webkit-transition: 0.25s;
+		transition-duration: 0.25s;
+	}
+
+		.aside_left a:hover {
+			color: #f44336;
+		}
+
+	.aside_left ul li {
+		font-size: 110%;
+	}
+
+	.aside_left .active {
+		font-weight: bold;
+		color: #022e4e;
+	}
+
+		.aside_left .active a {
+			font-weight: bold;
+			color: #022e4e;
+		}
+
+			.aside_left .active a:hover {
+				color: #f44336;
+			}
+
+	.aside_left .nav_path {
+		font-size: 10px;
+		text-indent: 1em;
+		font-style: italic;
+	}
+
+	.aside_left img {
+		width: 80%;
+		margin: auto;
+	}
+
+	.aside_left ul ul li {
+		font-size: 80%;
+	}
+
+section {
+	width: 75%;
+	float: left;
+}
+
+.aside_right img {
+	max-width: 250px;
+}
+
+#logInOut{
+	font-size: 100%;
+	float: right;
+	width: calc(20% + 2em);
+}
+
+#logInOut_compensation{
+	font-size: 100%;
+	width: calc(20% - 2em);
+	float:left;
+	display: inline;
+}
+
+#login{
+	padding: 0;
+	color: #f44336;
+}
+
+	#login:hover{
+		color: ghostwhite;
+	}

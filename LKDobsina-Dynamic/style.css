@@ -1,0 +1,414 @@
+/*CSS Document
+header, nav, section, article, div, aside, footer, main, table, th, td, figure {
+	border: 0.5px solid black;	
+}*/
+
+body {
+	background-color: rgba(200, 200, 200, 0.5);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-image: url(Obrazky/logo_background.jpg);
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin: 0;
+}
+
+.main_header {
+	text-align: center;
+	font-weight: bold;
+	text-shadow: 5px 5px 10px black;
+	text-transform: uppercase;
+	color: ghostwhite;
+	font-size: 36px;
+	padding: 0.5em;
+	background-image: url(Obrazky/header-background.jpg);
+	background-repeat: no-repeat;
+	background-color: rgb(43, 98, 139);
+}
+
+nav {
+	font-size: 110%;
+	padding: 1em;
+	width: 100%;
+	background-color: #222222;
+	text-align: center;
+}
+
+@keyframes shake {
+	0% {
+		transform: rotate(10deg);
+		-webkit-transform: rotate(10deg);
+	}
+
+	50% {
+		transform: rotate(-20deg);
+		-webkit-transform: rotate(-20deg);
+	}
+
+	100% {
+		transform: rotate(10deg);
+		-webkit-transform: rotate(10deg);
+	}
+}
+
+.fa {
+	padding: 0 5px;
+	color: #58b7fb;
+}
+
+.button {
+	text-decoration: none;
+	font-weight: bolder;
+	color: white;
+	width: auto;
+	padding: 0.5em;
+	-webkit-transition: 0.25s;
+}
+
+	.button:hover {
+		color: #f44336;
+	}
+
+		.button:hover .fa {
+			animation-name: shake;
+			animation-duration: 1s;
+			animation-iteration-count: infinite;
+		}
+
+.aside_left {
+	width: 20%;
+	background-color: rgb(75, 140, 210);
+	float: left;
+}
+
+	.aside_left div {
+		margin-bottom: 50px;
+		padding: 1em;
+		color: ghostwhite;
+	}
+
+	.aside_left a {
+		text-decoration: none;
+		color: ghostwhite;
+		-webkit-transition: 0.25s;
+		transition-duration: 0.25s;
+	}
+
+		.aside_left a:hover {
+			color: #f44336;
+		}
+
+	.aside_left ul li {
+		font-size: 110%;
+	}
+
+	.aside_left .active {
+		font-weight: bold;
+		color: #022e4e;
+	}
+
+		.aside_left .active a {
+			font-weight: bold;
+			color: #022e4e;
+		}
+
+			.aside_left .active a:hover {
+				color: #f44336;
+			}
+
+	.aside_left .nav_path {
+		font-size: 10px;
+		text-indent: 1em;
+		font-style: italic;
+	}
+
+	.aside_left img {
+		width: 80%;
+		margin: auto;
+	}
+
+	.aside_left ul ul li {
+		font-size: 80%;
+	}
+
+section {
+	width: 60%;
+	height: auto;
+	float: left;
+	background-color: rgba(200, 200, 200, 0.85);
+}
+
+	section h1 {
+		padding: 0 2em;
+		text-align: center;
+		color: #f44336;
+	}
+
+	section h2 {
+		padding: 0 2em;
+		text-align: center;
+		font-size: 200%;
+		font-weight: 600;
+	}
+
+	section a {
+		text-decoration: none;
+		color: black;
+		transition: 0.25s;
+		-webkit-transition: 0.25s;
+	}
+
+	section .sample {
+		border-bottom: 1px black dotted;
+	}
+
+	section p {
+		padding: 0 1em;
+		text-indent: 2em;
+	}
+
+		section p a {
+			color: #022e4e;
+			font-weight: bold;
+		}
+
+	section span {
+		font-style: italic;
+		font-weight: 600;
+		padding: 0 1em;
+	}
+
+	section a:hover {
+		color: #f44336;
+	}
+
+	section article {
+		padding: 0 1%;
+	}
+
+		section article p {
+			text-indent: 0;
+		}
+
+	section table {
+		margin: auto;
+		border: 6px #022e4e double;
+		border-collapse: collapse;
+		background-color: rgba(255, 255, 255, 0.5);
+		text-align: center;
+	}
+
+		section table tr:first-child td {
+			font-weight: bold;
+			color: ghostwhite;
+			background-color: rgb(43, 98, 139);
+		}
+
+		section table tr td:first-child {
+			color: black;
+			font-weight: 500;
+			background-color: #999999;
+		}
+
+		section table tr:first-child td:first-child {
+			font-weight: bold;
+			color: ghostwhite;
+			background-color: #022e4e;
+		}
+
+		section table td {
+			border: 1.5px #022e4e solid;
+			padding: 0.5em 1em;
+		}
+
+	section article {
+		text-indent: 2em;
+		font-style: italic;
+		padding: 1% 5%;
+	}
+
+	section form {
+		padding: 1em;
+	}
+
+		section form legend {
+			font-weight: 500;
+		}
+
+		section form fieldset {
+			border: 1.5px blue solid;
+			margin: 2% 0;
+			padding: 1%;
+			border-radius: 10px;
+		}
+
+	section footer {
+		text-align: right;
+	}
+
+.aside_right {
+	width: 20%;
+	background-color: rgba(75, 140, 210, 0.5);
+	float: right;
+}
+
+	.aside_right img {
+		width: 70%;
+		margin: 5% 15%;
+		border-radius: 50%;
+	}
+
+	.aside_right li {
+		padding-bottom: 10px;
+	}
+
+		.aside_right li .info {
+			visibility: hidden;
+			background-color: rgba(0, 0, 0, 0.8);
+			color: ghostwhite;
+			text-align: center;
+			border-radius: 6px;
+			padding: 0.5em;
+			position: absolute;
+			z-index: 1;
+			max-width: 80%;
+		}
+
+		.aside_right li:hover .info {
+			visibility: visible;
+			transition: 0.4s;
+		}
+
+	.aside_right h3 {
+		margin: 0.5em;
+		color: #022e4e;
+	}
+
+	.aside_right li h4 {
+		color: ghostwhite;
+		margin: 0;
+	}
+
+	.aside_right li p {
+		color: ghostwhite;
+		margin: 0;
+	}
+
+	.aside_right p {
+		padding: 0 1em;
+	}
+
+		.aside_right p a {
+			text-decoration: none;
+			font-weight: bold;
+			color: #022e4e;
+			transition: 0.2s;
+		}
+
+			.aside_right p a:hover {
+				color: #f44336;
+			}
+
+	.aside_right .socialne_siete {
+		text-align: center;
+		background-color: rgba(70, 70, 255, 0.2);
+	}
+
+		.aside_right .socialne_siete i {
+			font-size: 200%;
+			color: black;
+			padding: 0.5em 0.5em;
+			transition: 0.4s;
+		}
+
+		.aside_right .socialne_siete .fcb:hover {
+			color: darkblue;
+		}
+
+		.aside_right .socialne_siete .insta:hover {
+			color: brown;
+		}
+
+		.aside_right .socialne_siete .gplus:hover {
+			color: red;
+		}
+
+#meno, #priezvisko, #mesto, #adresa, #psc, #tel_cislo, #mail {
+	width: 96%;
+	background-color: rgba(250, 250, 250, 0.7);
+	border: 2px #999999 solid;
+	border-radius: 10px;
+	padding: 0 1em;
+}
+
+#vek {
+	width: 6em;
+	text-align: center;
+	background-color: rgba(250, 250, 250, 0.7);
+	border: 2px #999999 solid;
+	border-radius: 10px;
+	padding: 0 1em;
+}
+
+	#vek:focus, #meno:focus, #priezvisko:focus, #mesto:focus, #adresa:focus, #psc:focus, #tel_cislo:focus, #mail:focus {
+		border-color: #022e4e;
+	}
+
+#posli {
+	border: 4px #022e4e solid;
+	border-radius: 10px;
+	margin-top: 1em;
+	padding: 0.5em;
+}
+
+article p {
+	font-weight: 600;
+}
+
+article address {
+	text-indent: 0;
+	font-style: italic;
+}
+
+.main_footer {
+	clear: both;
+	text-align: center;
+	color: white;
+	background-color: #022e4e;
+	padding: 1%;
+}
+
+	.main_footer img {
+		border-radius: 50%;
+		width: 40px;
+	}
+
+.con_33 {
+	width: 33%;
+	float: left;
+	background-color: red;
+	height: 100px;
+}
+
+#mapa {
+	width: 70%;
+	height: 400px;
+	margin: auto;
+}
+
+.partneri {
+	padding: 1% 4%;
+	background-color: rgba(255, 255, 255, 0.1);
+	border-radius: 35px;
+}
+
+	.partneri img {
+		padding: 2% 8%;
+		margin: auto;
+	}
+
+.spolocna_foto {
+	width: 60%;
+	padding: 2% 20%;
+}

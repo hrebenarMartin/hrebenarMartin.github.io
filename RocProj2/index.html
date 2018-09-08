@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<!-- <link rel="stylesheet" type="text/css" href="style.css" media="all"> -->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+<title>Ročníkový projekt 2</title>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-4"> <p class="display-4 text-sm-center sideline"></p> </div>
+    <div class="col-sm-4"> <p class="display-4 text-sm-center"> PROJECT GALLERY </p> </div>
+    <div class="col-sm-4"> <p class="display-4 text-sm-center sideline"></p> </div>
+  </div>
+</div>
+
+    <a href="ROCNIKOVY_PROJEKT_HREBENAR.zip" download id='download'><span id='btn-text'>Stiahni si projekt TU!</span></a>
+
+<h1 class='res1'>=======================================================================================</h1>
+<h1 class='res2'> O Projekte:</br></h1>
+  <p class='txt'>
+    Projekt galéria je konzolová aplikácia napísaná v jazyku C++. Aplikácia má funkcie ako vytvorenie nového obrázku, prezeranie celej galérie,
+    posúvanie galérie, voľbu počtu zobrazovaných obrázkov a mazanie obrázkov. UI je jednoduché na princípe zadávaných príkazov podobne ako
+    starý dobrý príkazový riadok.
+  </p>
+
+  <h1 class='res3'>>>> <span id='cursor'>_</span> </h1>
+<footer id='foot'>
+  <p class='txt'>Vytroril: Martin Hrebeňár &copy; 2018</p>
+</footer>
+
+<script>
+
+  window.addEventListener("load", function(){
+    console.log("Ahoj loaded");
+
+    var sidelines = document.getElementsByClassName("sideline");
+
+    for (let i = 0; i < sidelines.length; i++){
+      let s = '';
+
+      for (let j = 0; j < sidelines[i].offsetWidth / 50; j++){
+        s = s + "=";
+      }
+      console.log("done "+ i);
+      sidelines[i].innerHTML = s;
+    }
+  })
+
+  window.addEventListener("resize", function(){
+    console.log("Ahoj resized");
+
+    var sidelines = document.getElementsByClassName("sideline");
+
+    console.log(sidelines[1].innerHTML);
+
+    for (let i = 0; i < sidelines.length; i++){
+      let s = '';
+
+      for (let j = 0; j < sidelines[i].offsetWidth / 50; j++){
+        s = s + "=";
+      }
+      console.log("done "+ i);
+      sidelines[i].innerHTML = s;
+    }
+  });
+
+
+</script>
+
+</body>
+
+</htmp>

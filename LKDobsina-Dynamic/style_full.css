@@ -1,0 +1,25 @@
+.aside_left {
+	width: 20%;
+}
+
+section {
+	width: 60%;
+}
+
+.aside_right {
+	width: 20%;
+	clear: none;
+	float: right;
+}
+
+	.aside_right img {
+		width: 70%;
+		max-width: 600px;
+		margin: 5% 15%;
+		border-radius: 50%;
+		position: initial;
+	}
+
+	.aside_right div {
+		width: 100%;
+	}
