@@ -4,6 +4,9 @@ void function ($) {
         animationInterval: null, moveStep: 1, pointDiameter: 16, animationSpeed: 60
     };
 
+    /**
+     * Auto-execute after script load and document is ready
+     */
     $(() => {
         initBackground();
         initTheme();

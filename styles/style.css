@@ -1,13 +1,56 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-body {
-  font-family: "Nunito", sans-serif;
-  background-color: #FCFCFC;
-  color: #303030;
-  transition: background-color 500ms ease, color 500ms ease;
+::-webkit-scrollbar {
+  width: 10px;
 }
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::selection {
+  background-color: black;
+  color: white;
+}
+
 body a {
   text-decoration: none;
   color: inherit;
+}
+body a:hover {
+  text-decoration: none;
+  color: inherit;
+}
+body main .section-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  min-height: 100vh;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+body main .section-hero img.ftw-hero-img {
+  max-width: 240px;
+}
+body main .section-about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  min-height: 100vh;
+  padding-top: 6em;
+  padding-bottom: 6em;
+}
+
+body {
+  background-color: #FCFCFC;
+  color: #303030;
+  transition: background-color 500ms ease, color 500ms ease;
 }
 @media (prefers-color-scheme: dark) {
   body {
@@ -23,109 +66,6 @@ body.theme-dark {
   background-color: #303030;
   color: #FCFCFC;
 }
-body main .section-1 {
-  min-height: 100vh;
-  padding-top: 6em;
-}
-body .main-overlay {
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-body .main-overlay .main-overlay-position {
-  position: absolute;
-  padding: 10px;
-}
-body .main-overlay .main-overlay-position .animation-action {
-  width: 16px;
-  word-break: keep-all;
-  overflow: hidden;
-  display: block;
-  white-space: nowrap;
-  opacity: 0.3;
-  transition: width 250ms ease, opacity 250ms ease;
-  cursor: pointer;
-}
-body .main-overlay .main-overlay-position .animation-action:hover {
-  width: 300px;
-  opacity: 1;
-  transition: width 250ms ease, opacity 250ms ease;
-}
-body .main-overlay .main-overlay-position .theme-action {
-  width: 16px;
-  word-break: keep-all;
-  overflow: hidden;
-  display: flex;
-  justify-content: flex-end;
-  align-items: baseline;
-  white-space: nowrap;
-  text-align: right;
-  opacity: 0.3;
-  transition: width 100ms linear, opacity 400ms ease;
-  cursor: pointer;
-  line-height: 1;
-}
-body .main-overlay .main-overlay-position .theme-action .theme-action-text {
-  opacity: 0;
-  transition: opacity 1000ms ease;
-}
-body .main-overlay .main-overlay-position .theme-action i {
-  margin-left: 5px;
-}
-body .main-overlay .main-overlay-position .theme-action:hover {
-  width: 200px;
-  opacity: 1;
-  transition: width 250ms linear, opacity 250ms ease;
-}
-body .main-overlay .main-overlay-position .theme-action:hover .theme-action-text {
-  opacity: 1;
-  transition: opacity 1000ms ease;
-}
-body .main-overlay .top-left {
-  top: 0;
-  left: 0;
-}
-body .main-overlay .top-right {
-  top: 0;
-  right: 0;
-}
-body .main-overlay .bottom-left {
-  bottom: 0;
-  left: 0;
-  opacity: 0.3;
-  transition: opacity 250ms ease;
-}
-body .main-overlay .bottom-left:hover {
-  opacity: 1;
-  transition: opacity 250ms ease;
-}
-body .main-overlay .bottom-right {
-  bottom: 0;
-  right: 0;
-}
-body .background-canvas-wrapper {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: hidden;
-}
-body .background-canvas-wrapper #live-background {
-  position: relative;
-}
-body .background-canvas-wrapper #live-background .live-point {
-  position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 50%;
-  border: none;
-}
-
 @media (prefers-color-scheme: dark) {
   body .background-canvas-wrapper #live-background .live-point.size-50 {
     -webkit-box-shadow: inset 0 0 46px 0 rgba(252, 252, 252, 0.15);
@@ -247,6 +187,107 @@ body.theme-dark .background-canvas-wrapper #live-background .live-point.size-150
   box-shadow: inset 0 0 46px 0 rgba(252, 252, 252, 0.15);
   width: 150px;
   height: 150px;
+}
+body .background-canvas-wrapper {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+}
+body .background-canvas-wrapper #live-background {
+  position: relative;
+}
+body .background-canvas-wrapper #live-background .live-point {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: none;
+}
+
+body .main-overlay {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+body .main-overlay .main-overlay-position {
+  position: absolute;
+  padding: 10px;
+  pointer-events: all;
+}
+body .main-overlay .main-overlay-position .animation-action {
+  width: 16px;
+  word-break: keep-all;
+  overflow: hidden;
+  display: block;
+  white-space: nowrap;
+  opacity: 0.3;
+  transition: width 250ms ease, opacity 250ms ease;
+  cursor: pointer;
+}
+body .main-overlay .main-overlay-position .animation-action:hover {
+  width: 300px;
+  opacity: 1;
+  transition: width 250ms ease, opacity 250ms ease;
+}
+body .main-overlay .main-overlay-position .theme-action {
+  width: 16px;
+  word-break: keep-all;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  white-space: nowrap;
+  text-align: right;
+  opacity: 0.3;
+  transition: width 100ms linear, opacity 400ms ease;
+  cursor: pointer;
+  line-height: 1;
+}
+body .main-overlay .main-overlay-position .theme-action .theme-action-text {
+  opacity: 0;
+  transition: opacity 1000ms ease;
+}
+body .main-overlay .main-overlay-position .theme-action i {
+  margin-left: 5px;
+}
+body .main-overlay .main-overlay-position .theme-action:hover {
+  width: 200px;
+  opacity: 1;
+  transition: width 250ms linear, opacity 250ms ease;
+}
+body .main-overlay .main-overlay-position .theme-action:hover .theme-action-text {
+  opacity: 1;
+  transition: opacity 1000ms ease;
+}
+body .main-overlay .top-left {
+  top: 0;
+  left: 0;
+}
+body .main-overlay .top-right {
+  top: 0;
+  right: 0;
+}
+body .main-overlay .bottom-left {
+  bottom: 0;
+  left: 0;
+  opacity: 0.3;
+  transition: opacity 250ms ease;
+}
+body .main-overlay .bottom-left:hover {
+  opacity: 1;
+  transition: opacity 250ms ease;
+}
+body .main-overlay .bottom-right {
+  bottom: 0;
+  right: 0;
 }
 
 /*# sourceMappingURL=style.css.map */

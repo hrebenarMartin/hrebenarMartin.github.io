@@ -1,163 +1,62 @@
+@use 'variables' as *;
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-$background-main-light: #FCFCFC;
-$background-main-dark: #303030;
-$text-main-light: #FCFCFC;
-$text-main-dark: #303030;
-
-@media (prefers-color-scheme: dark) {
+::-webkit-scrollbar {
+  width: 10px;
 }
 
-@media (prefers-color-scheme: light) {
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+::selection {
+  background-color: black;
+  color: white;
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
-  background-color: $background-main-light;
-  color: $text-main-dark;
-  transition: background-color 500ms ease, color 500ms ease;
-
   a {
     text-decoration: none;
     color: inherit;
-  }
 
-  @media (prefers-color-scheme: dark) {
-    background-color: $background-main-dark;
-    color: $text-main-light;
-  }
-
-  &.theme-light {
-    background-color: $background-main-light;
-    color: $text-main-dark;
-  }
-
-  &.theme-dark {
-    background-color: $background-main-dark;
-    color: $text-main-light;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 
   main {
-    .section-1 {
+    .section-hero {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
       min-height: 100vh;
       padding-top: 6em;
-    }
-  }
+      padding-bottom: 6em;
 
-  .main-overlay {
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-
-    .main-overlay-position {
-      position: absolute;
-      padding: 10px;
-
-      .animation-action {
-        width: 16px;
-        word-break: keep-all;
-        overflow: hidden;
-        display: block;
-        white-space: nowrap;
-        opacity: .3;
-        transition: width 250ms ease, opacity 250ms ease;
-        cursor: pointer;
-
-        &:hover {
-          width: 300px;
-          opacity: 1;
-          transition: width 250ms ease, opacity 250ms ease;
-        }
-      }
-
-      .theme-action {
-        width: 16px;
-        word-break: keep-all;
-        overflow: hidden;
-        display: flex;
-        justify-content: flex-end;
-        align-items: baseline;
-        white-space: nowrap;
-        text-align: right;
-        opacity: .3;
-        transition: width 100ms linear, opacity 400ms ease;
-        cursor: pointer;
-        line-height: 1;
-
-        .theme-action-text {
-          opacity: 0;
-          transition: opacity 1000ms ease;
-        }
-
-        i {
-          margin-left: 5px;
-        }
-
-        &:hover {
-          width: 200px;
-          opacity: 1;
-          transition: width 250ms linear, opacity 250ms ease;
-
-          .theme-action-text {
-            opacity: 1;
-            transition: opacity 1000ms ease;
-          }
-        }
+      img.ftw-hero-img{
+        max-width: 240px;
       }
     }
 
-    .top-left {
-      top: 0;
-      left: 0;
-    }
-
-    .top-right {
-      top: 0;
-      right: 0;
-    }
-
-    .bottom-left {
-      bottom: 0;
-      left: 0;
-      opacity: .3;
-      transition: opacity 250ms ease;
-
-      &:hover {
-        opacity: 1;
-        transition: opacity 250ms ease;
-      }
-    }
-
-    .bottom-right {
-      bottom: 0;
-      right: 0;
-    }
-  }
-
-  .background-canvas-wrapper {
-    position: fixed;
-    z-index: -1;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-
-    #live-background {
-      position: relative;
-
-      .live-point {
-        position: absolute;
-        width: 16px;
-        height: 16px;
-        border-radius: 50%;
-        border: none;
-      }
+    .section-about{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column;
+      min-height: 100vh;
+      padding-top: 6em;
+      padding-bottom: 6em;
     }
   }
 }
 
 @import 'background';
+@import 'overlay';
