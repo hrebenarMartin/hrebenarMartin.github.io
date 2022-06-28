@@ -32,34 +32,65 @@ void function ($) {
     }
 
     function initTheme() {
-        $(".js-theme-dark").hide();
-
+        determineTheme();
         bindSwitchLightTheme();
         bindSwitchDarkTheme();
     }
 
+    function determineTheme() {
+        if (getPreferredThemeFromCookie() === "DARK" || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            switchToDarkTheme()
+        } else if (getPreferredThemeFromCookie() === "LIGHT" || (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches)) {
+            switchToLightTheme()
+        }
+
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+            event.matches ? switchToDarkTheme() : switchToLightTheme();
+        });
+    }
+
     function bindSwitchLightTheme() {
         $(".js-theme-light").click(() => {
-            let body = $("body");
-            if (body.hasClass("theme-dark")) {
-                body.removeClass("theme-dark")
-            }
-            body.addClass("theme-light")
-            $(".js-theme-dark").show();
-            $(".js-theme-light").hide();
+            document.cookie = "ftw_prefers_theme=light; max-age=36000 ;Secure";
+            switchToLightTheme();
         });
     }
 
     function bindSwitchDarkTheme() {
         $(".js-theme-dark").click(() => {
-            let body = $("body");
-            if (body.hasClass("theme-light")) {
-                body.removeClass("theme-light")
-            }
-            body.addClass("theme-dark")
-            $(".js-theme-dark").hide();
-            $(".js-theme-light").show();
+            document.cookie = "ftw_prefers_theme=dark; max-age=36000 ;Secure";
+            switchToDarkTheme();
         });
+    }
+
+    function getPreferredThemeFromCookie() {
+        if (document.cookie.split(';').some((item) => item.includes('ftw_prefers_theme=dark'))) {
+            return "DARK";
+        }
+        if (document.cookie.split(';').some((item) => item.includes('ftw_prefers_theme=light'))) {
+            return "LIGHT";
+        }
+        return "";
+    }
+
+    function switchToLightTheme() {
+        let body = $("body");
+        if (body.hasClass("theme-dark")) {
+            body.removeClass("theme-dark")
+        }
+        body.addClass("theme-light")
+        $(".js-theme-dark").show();
+        $(".js-theme-light").hide();
+    }
+
+    function switchToDarkTheme() {
+        let body = $("body");
+        if (body.hasClass("theme-light")) {
+            body.removeClass("theme-light")
+        }
+        body.addClass("theme-dark")
+        $(".js-theme-dark").hide();
+        $(".js-theme-light").show();
     }
 
     function bindStopAnimation() {
