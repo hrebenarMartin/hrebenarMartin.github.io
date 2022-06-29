@@ -46,15 +46,26 @@ body {
 
 
   main {
-    .section-hero {
-      display:         flex;
-      justify-content: center;
-      align-items:     center;
-      flex-flow:       column;
+
+    .section {
+      position:        relative;
       min-height:      100vh;
       padding-top:     6em;
       padding-bottom:  6em;
 
+      display:         flex;
+      justify-content: center;
+      align-items:     center;
+      flex-flow:       column;
+
+      .next-section {
+        position: absolute;
+        bottom:   6em;
+        cursor:   pointer;
+      }
+    }
+
+    .section-hero {
       .hero-divider {
         width:         6em;
         height:        4px;
@@ -73,13 +84,18 @@ body {
     }
 
     .section-about {
-      display:         flex;
-      justify-content: center;
-      align-items:     center;
-      flex-flow:       column;
-      min-height:      100vh;
-      padding-top:     6em;
-      padding-bottom:  6em;
+      img {
+        max-width: 240px;
+      }
+    }
+
+    .section-journey {
+    }
+
+    .section-work {
+    }
+
+    .section-final {
     }
   }
 }
