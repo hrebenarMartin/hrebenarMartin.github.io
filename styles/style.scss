@@ -7,53 +7,79 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #888;
+  background:    #888888;
   border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #555;
+  background: #555555;
 }
 
 ::selection {
   background-color: black;
-  color: white;
+  color:            white;
 }
 
 body {
   a {
     text-decoration: none;
-    color: inherit;
+    color:           inherit;
 
     &:hover {
       text-decoration: none;
-      color: inherit;
+      color:           inherit;
+      transition:      color 250ms ease;
     }
   }
 
+  &.theme-light {
+    a:hover {
+      color: $text-main-hover-dark;
+    }
+  }
+
+  &.theme-dark {
+    a:hover {
+      color: $text-main-hover-light;
+    }
+  }
+
+
   main {
     .section-hero {
-      display: flex;
+      display:         flex;
       justify-content: center;
-      align-items: center;
-      flex-flow: column;
-      min-height: 100vh;
-      padding-top: 6em;
-      padding-bottom: 6em;
+      align-items:     center;
+      flex-flow:       column;
+      min-height:      100vh;
+      padding-top:     6em;
+      padding-bottom:  6em;
 
-      img.ftw-hero-img{
-        max-width: 240px;
+      .hero-divider {
+        width:         6em;
+        height:        4px;
+        border-radius: 5px;
+      }
+
+      .hero-links {
+        display:         flex;
+        justify-content: center;
+
+        a {
+          text-align: center;
+          font-size:  2em;
+        }
       }
     }
 
-    .section-about{
-      display: flex;
+    .section-about {
+      display:         flex;
       justify-content: center;
-      align-items: center;
-      flex-flow: column;
-      min-height: 100vh;
-      padding-top: 6em;
-      padding-bottom: 6em;
+      align-items:     center;
+      flex-flow:       column;
+      min-height:      100vh;
+      padding-top:     6em;
+      padding-bottom:  6em;
     }
   }
 }

@@ -2,20 +2,20 @@
 
 @mixin animPointLight($radius) {
   -webkit-box-shadow: inset 0 0 46px 0 $background-point-light;
-  -moz-box-shadow: inset 0 0 46px 0 $background-point-light;
-  -o-box-shadow: inset 0 0 46px 0 $background-point-light;
-  box-shadow: inset 0 0 46px 0 $background-point-light;
+  -moz-box-shadow:    inset 0 0 46px 0 $background-point-light;
+  -o-box-shadow:      inset 0 0 46px 0 $background-point-light;
+  box-shadow:         inset 0 0 46px 0 $background-point-light;
 
-  width: $radius;
-  height: $radius;
+  width:              $radius;
+  height:             $radius;
 }
 
 @mixin animPointDark($radius) {
   -webkit-box-shadow: inset 0 0 46px 0 $background-point-dark;
-  -moz-box-shadow: inset 0 0 46px 0 $background-point-dark;
-  -o-box-shadow: inset 0 0 46px 0 $background-point-dark;
-  box-shadow: inset 0 0 46px 0 $background-point-dark;
+  -moz-box-shadow:    inset 0 0 46px 0 $background-point-dark;
+  -o-box-shadow:      inset 0 0 46px 0 $background-point-dark;
+  box-shadow:         inset 0 0 46px 0 $background-point-dark;
 
-  width: $radius;
-  height: $radius;
+  width:              $radius;
+  height:             $radius;
 }

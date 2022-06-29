@@ -1,51 +1,51 @@
 body {
   .main-overlay {
-    position: fixed;
-    z-index: 100;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    position:       fixed;
+    z-index:        100;
+    top:            0;
+    bottom:         0;
+    left:           0;
+    right:          0;
     pointer-events: none;
 
     .main-overlay-position {
-      position: absolute;
-      padding: 10px;
+      position:       absolute;
+      padding:        10px;
       pointer-events: all;
 
       .animation-action {
-        width: 16px;
-        word-break: keep-all;
-        overflow: hidden;
-        display: block;
+        width:       16px;
+        word-break:  keep-all;
+        overflow:    hidden;
+        display:     block;
         white-space: nowrap;
-        opacity: .3;
-        transition: width 250ms ease, opacity 250ms ease;
-        cursor: pointer;
+        opacity:     .3;
+        transition:  width 250ms ease, opacity 250ms ease;
+        cursor:      pointer;
 
         &:hover {
-          width: 300px;
-          opacity: 1;
+          width:      300px;
+          opacity:    1;
           transition: width 250ms ease, opacity 250ms ease;
         }
       }
 
       .theme-action {
-        width: 16px;
-        word-break: keep-all;
-        overflow: hidden;
-        display: flex;
+        width:           16px;
+        word-break:      keep-all;
+        overflow:        hidden;
+        display:         flex;
         justify-content: flex-end;
-        align-items: baseline;
-        white-space: nowrap;
-        text-align: right;
-        opacity: .3;
-        transition: width 100ms linear, opacity 400ms ease;
-        cursor: pointer;
-        line-height: 1;
+        align-items:     baseline;
+        white-space:     nowrap;
+        text-align:      right;
+        opacity:         .3;
+        transition:      width 100ms linear, opacity 400ms ease;
+        cursor:          pointer;
+        line-height:     1;
 
         .theme-action-text {
-          opacity: 0;
+          opacity:    0;
           transition: opacity 1000ms ease;
         }
 
@@ -54,12 +54,12 @@ body {
         }
 
         &:hover {
-          width: 200px;
-          opacity: 1;
+          width:      200px;
+          opacity:    1;
           transition: width 250ms linear, opacity 250ms ease;
 
           .theme-action-text {
-            opacity: 1;
+            opacity:    1;
             transition: opacity 1000ms ease;
           }
         }
@@ -67,30 +67,30 @@ body {
     }
 
     .top-left {
-      top: 0;
+      top:  0;
       left: 0;
     }
 
     .top-right {
-      top: 0;
+      top:   0;
       right: 0;
     }
 
     .bottom-left {
-      bottom: 0;
-      left: 0;
-      opacity: .3;
+      bottom:     0;
+      left:       0;
+      opacity:    .3;
       transition: opacity 250ms ease;
 
       &:hover {
-        opacity: 1;
+        opacity:    1;
         transition: opacity 250ms ease;
       }
     }
 
     .bottom-right {
       bottom: 0;
-      right: 0;
+      right:  0;
     }
   }
 }
