@@ -63,6 +63,52 @@ body {
         bottom:   6em;
         cursor:   pointer;
       }
+
+      .timeline {
+        .timeline-entry {
+          text-align:     center;
+          padding-bottom: 6em;
+          position:       relative;
+
+          &:after {
+            content:     "";
+            position:    absolute;
+            width:       1px;
+            height:      5em;
+            border-left: 1px $text-main-light solid;
+            opacity:     .5;
+          }
+
+          &:last-of-type:after {
+            content: none;
+          }
+
+          .icon {
+            font-size: 4em;
+          }
+
+          .description {
+            .date {
+              font-size:   1.75em;
+              font-weight: lighter;
+            }
+
+            .title {
+              font-size: 1.8em;
+            }
+
+            .subtitle {
+              font-size: 1.4em;
+            }
+
+            .info {
+              max-width: 75%;
+              margin: auto;
+              font-weight: lighter;
+            }
+          }
+        }
+      }
     }
 
     .section-hero {
@@ -93,6 +139,21 @@ body {
     }
 
     .section-work {
+      .technologies{
+        .technology-group{
+          border: 1px $text-main-light solid;
+          border-radius: 5px;
+          padding: 1em;
+          margin: 1em;
+          display: flex;
+          flex-direction: column;
+          height: 90%;
+
+          .title{
+            font-weight: bold;
+          }
+        }
+      }
     }
 
     .section-final {

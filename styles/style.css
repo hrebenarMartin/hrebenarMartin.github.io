@@ -47,6 +47,40 @@ body main .section .next-section {
   bottom: 6em;
   cursor: pointer;
 }
+body main .section .timeline .timeline-entry {
+  text-align: center;
+  padding-bottom: 6em;
+  position: relative;
+}
+body main .section .timeline .timeline-entry:after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 5em;
+  border-left: 1px #fcfcfc solid;
+  opacity: 0.5;
+}
+body main .section .timeline .timeline-entry:last-of-type:after {
+  content: none;
+}
+body main .section .timeline .timeline-entry .icon {
+  font-size: 4em;
+}
+body main .section .timeline .timeline-entry .description .date {
+  font-size: 1.75em;
+  font-weight: lighter;
+}
+body main .section .timeline .timeline-entry .description .title {
+  font-size: 1.8em;
+}
+body main .section .timeline .timeline-entry .description .subtitle {
+  font-size: 1.4em;
+}
+body main .section .timeline .timeline-entry .description .info {
+  max-width: 75%;
+  margin: auto;
+  font-weight: lighter;
+}
 body main .section-hero .hero-divider {
   width: 6em;
   height: 4px;
@@ -62,6 +96,18 @@ body main .section-hero .hero-links a {
 }
 body main .section-about img {
   max-width: 240px;
+}
+body main .section-work .technologies .technology-group {
+  border: 1px #fcfcfc solid;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em;
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+body main .section-work .technologies .technology-group .title {
+  font-weight: bold;
 }
 body {
   background-color: #fcfcfc;
